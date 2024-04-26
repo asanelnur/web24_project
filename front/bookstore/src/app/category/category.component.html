@@ -1,0 +1,10 @@
+<h2>Categories: </h2>
+<ul *ngIf="loaded; else loading">
+  <li *ngFor="let category of categories">
+    <a [routerLink]="['/category', category.id]">{{category.id}}) {{category.name}}</a>
+  </li>
+</ul>
+
+<ng-template #loading>
+  <p>Categories are loading ...</p>
+</ng-template>

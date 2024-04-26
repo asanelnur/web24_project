@@ -1,0 +1,10 @@
+<h2>Baskets: </h2>
+<ul *ngIf="loaded; else loading">
+  <li *ngFor="let basket of baskets">
+    <p>{{basket.id}}) {{basket.book.title}} {{basket.book.price}}</p>
+  </li>
+</ul>
+
+<ng-template #loading>
+  <p>Baskets are loading ...</p>
+</ng-template>

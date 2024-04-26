@@ -1,0 +1,9 @@
+<div *ngIf="loaded">
+  <h2>Book: {{book.title}}</h2>
+  <h5>Price: {{book.price}}, Description: {{book.description}}</h5>
+
+  <h3>Author:</h3>
+  <h5>{{book.author.name}} {{book.author.surname}}</h5>
+</div>
+
+<p *ngIf="!loaded">Book detail page is loading...</p>
